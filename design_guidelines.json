@@ -1,0 +1,133 @@
+{
+  "theme": "Gamer Dark Cyberpunk / Neon Studio",
+  "archetype": "ARCHETYPE 7: ELECTRIC & NEON (Future, Speed, Disruption) + TACTICAL MINIMALISM",
+  "typography": {
+    "headings": "Exo 2, Outfit, or Orbitron (Bold/ExtraBold/Black, tracking-tight, neon-glow text shadows)",
+    "subheadings": "Rajdhani, JetBrains Mono, or Share Tech Mono",
+    "body": "Inter or DM Sans (high legibility, tracking-wide for telemetry & code)",
+    "font_pairing_notes": "Never use Inter for Main or Sub-headings. Use Orbitron/Exo 2 for H1/H2, Rajdhani/JetBrains Mono for metrics and HUD controls."
+  },
+  "colors": {
+    "background": {
+      "void": "#06070B",
+      "surface_dark": "#0B0E14",
+      "card_bg": "#10141E",
+      "overlay_glass": "rgba(11, 14, 20, 0.75)"
+    },
+    "accents": {
+      "cyan_neon": "#00F0FF",
+      "magenta_pink": "#FF0055",
+      "electric_purple": "#7000FF",
+      "volt_yellow": "#FFD700",
+      "toxic_green": "#00FF66"
+    },
+    "text": {
+      "primary": "#F0F4FF",
+      "secondary": "#94A3B8",
+      "muted": "#64748B"
+    },
+    "borders": {
+      "glow_cyan": "rgba(0, 240, 255, 0.3)",
+      "glow_magenta": "rgba(255, 0, 85, 0.3)",
+      "subtle": "rgba(255, 255, 255, 0.08)"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": "backdrop-blur-xl bg-[#0B0E14]/80 border border-cyan-500/20 shadow-[0_0_15px_rgba(0,240,255,0.1)]",
+    "scanlines": "CSS repeating linear gradient overlay for CRT/Cyber HUD effect",
+    "tracing_beam": "Animated neon border gradients on active wallpaper cards or monitor controls",
+    "neon_glows": "drop-shadow-[0_0_8px_rgba(0,240,255,0.6)] for primary actions and FPS/Performance counters"
+  },
+  "grids_and_layouts": {
+    "dashboard_mode": "High Density Grid (MODE B) with 12-column layout (grid-cols-1 lg:grid-cols-12 gap-6)",
+    "bento_spans": {
+      "simulator_hero": "col-span-12 lg:col-span-8 row-span-2 (Interactive Desktop Simulator with aspect ratio switcher)",
+      "live_controls": "col-span-12 lg:col-span-4 (Video FX Studio, Shader Controls, Audio Reactivity)",
+      "wallpaper_library": "col-span-12 lg:col-span-8 (Multi-format Library with tags, preview, search)",
+      "monitor_studio": "col-span-12 lg:col-span-4 (Multi-Monitor 1/2/3 Routing & Resolution Config)",
+      "ai_shader_studio": "col-span-12 lg:col-span-6 (AI Prompt to Animated Shader Generator)",
+      "script_exporter": "col-span-12 lg:col-span-6 (Windows .ps1 / .bat & Wallpaper Engine / Lively ZIP Generator)"
+    }
+  },
+  "image_urls": {
+    "cyberpunk_city": [
+      {
+        "url": "https://images.unsplash.com/photo-1672872476232-da16b45c9001?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwxfHxjeWJlcnB1bmslMjBuZW9uJTIwZ2FtaW5nJTIwY2l0eSUyMHdhbGxwYXBlcnxlbnwwfHx8fDE3ODg3OTc4ODh8MA&ixlib=rb-4.1.0&q=85",
+        "category": "Cyberpunk Neon City",
+        "description": "Futuristic cyberpunk night city skyline"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1770234895321-631a39241507?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHw0fHxjeWJlcnB1bmslMjBuZW9uJTIwZ2FtaW5nJTIwY2l0eSUyMHdhbGxwYXBlcnxlbnwwfHx8fDE3ODg3OTc4ODh8MA&ixlib=rb-4.1.0&q=85",
+        "category": "Neon Light Trails",
+        "description": "Vibrant night street light trails"
+      }
+    ],
+    "synthwave_retro": [
+      {
+        "url": "https://images.unsplash.com/photo-1706466615917-e44750d177d7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwxfHxzeW50aHdhdmUlMjBuZW9uJTIwZ2FtaW5nJTIwbGFuZHNjYXBlfGVufDB8fHx8MTc4ODc5Nzg5Nnww&ixlib=rb-4.1.0&q=85",
+        "category": "Synthwave Sunset Grid",
+        "description": "Wireframe neon sun setting over grid landscape"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1767481626894-bab78ae919be?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHw3fHNlYXJjaHwzfHxzeW50aHdhdmUlMjBuZW9uJTIwZ2FtaW5nJTIwbGFuZHNjYXBlfGVufDB8fHx8MTc4ODc5Nzg5Nnww&ixlib=rb-4.1.0&q=85",
+        "category": "Geometric Diamond Grid",
+        "description": "Purple neon diamond 3D perspective grid"
+      }
+    ],
+    "scifi_hud": [
+      {
+        "url": "https://images.unsplash.com/photo-1720962158937-7ea890052166?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHwzfHxzY2lmaSUyMGZ1dHVyaXN0aWMlMjBob2xvZ3JhbSUyMG5lb24lMjBIVUR8ZW58MHx8fHwxNzg4Nzk3ODk2fDA&ixlib=rb-4.1.0&q=85",
+        "category": "Sci-Fi HUD Panel",
+        "description": "Futuristic telemetry control dashboard HUD"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1634834300387-8015d9fb7550?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHwxfHxzY2lmaSUyMGZ1dHVyaXN0aWMlMjBob2xvZ3JhbSUyMG5lb24lMjBIVUR8ZW58MHx8fHwxNzg4Nzk3ODk2fDA&ixlib=rb-4.1.0&q=85",
+        "category": "Cyber Tunnel",
+        "description": "3D neon blue orange speed tunnel"
+      }
+    ]
+  },
+  "key_components_to_build": [
+    {
+      "name": "DesktopSimulator",
+      "description": "Full interactive Windows desktop simulation with custom taskbar, start menu toggle, desktop icons, live audio visualizer canvas, FPS/RAM/CPU telemetry overlay, and aspect ratio switcher (1080p, 1440p, 4K, 21:9 Ultrawide, 32:9 Super Ultrawide)."
+    },
+    {
+      "name": "VideoEnginePlayer",
+      "description": "Multi-format player supporting MP4, WebM, MKV/MOV, animated GIF/WebP, HTML5 WebGL Canvas Shaders, and Direct HLS/Video Stream URLs with realtime FX filter overlay."
+    },
+    {
+      "name": "WallpaperLibrary",
+      "description": "Gamer wallpaper catalog with search, filter tags (Cyberpunk, Anime, Synthwave, Sci-Fi, Rain/Lo-Fi, Gaming/eSports, Abstract), multi-res badge indicators, and 1-click active wallpaper assignment."
+    },
+    {
+      "name": "FXStudioControls",
+      "description": "Real-time shader and video parameter adjustments: Brightness, Contrast, Saturation, Hue Shift, Gaussian Blur, Speed (0.25x-2.0x), CRT Scanline overlay toggle, Audio Reactivity sensitivity, and Volume controls."
+    },
+    {
+      "name": "ScriptGenerator",
+      "description": "Windows native automation pack generator producing downloadables/copyables for PowerShell (.ps1), Batch (.bat), Lively Wallpaper project format (.zip manifest), and Wallpaper Engine project structure."
+    },
+    {
+      "name": "AIPromptStudio",
+      "description": "AI-powered creative studio that takes user prompts (e.g. 'Neon samurai in rain with glowing katana') and synthesizes animated WebGL shader code, procedural particle prompts, and visual parameters."
+    },
+    {
+      "name": "MultiMonitorStudio",
+      "description": "Visual multi-monitor layout picker allowing distinct wallpapers and resolution profiles assigned to Monitor 1, Monitor 2, and Monitor 3."
+    },
+    {
+      "name": "PerformanceProfiles",
+      "description": "Gamer profile selector: Battery Saver (30 FPS), Balanced (60 FPS), Ultra eSports (144Hz/240Hz), plus auto-pause simulation on full-screen gaming mode."
+    }
+  ],
+  "testing_attributes": {
+    "rule": "All interactive buttons, sliders, selects, tabs, inputs, and canvas containers MUST include data-testid attributes (e.g. data-testid='aspect-ratio-1080p', data-testid='fx-brightness-slider', data-testid='export-ps1-button')."
+  },
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": {
+    "spacing": "Use generous Tailwind spacing (p-6, p-8, gap-6). Ensure cards have internal padding to prevent content text collision.",
+    "hover_contrast": "Ensure hover states explicitly specify text color (e.g. hover:bg-cyan-500/20 hover:text-cyan-300).",
+    "accessibility": "Ensure high APCA text contrast against dark backgrounds (#F0F4FF on #0B0E14).",
+    "animations": "Micro-animations with Framer Motion or smooth CSS transitions on wallpaper switching, monitor drag-drop, and FX slider tweaks."
+  }
+}
