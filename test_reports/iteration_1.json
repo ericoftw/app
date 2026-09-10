@@ -1,0 +1,67 @@
+{
+  "iteration": 1,
+  "summary": "8 backend checks passed, 2 browser checks passed. 0 failed, 0 flaky, 0 blocked, 0 test_error.",
+  "passed": 10,
+  "failed": 0,
+  "bugs": [],
+  "action_items": [],
+  "retest_needed": false,
+  "checks": [
+    {
+      "criterion": "POST /api/scripts/generate com script_type=powershell devolve um script realmente funcional",
+      "name": "test_tscheck_powershell_script_functional.py",
+      "lane": "backend",
+      "status": "passed",
+      "evidence": "POST /api/scripts/generate {wallpaper_id: curated-1, script_type: powershell} -> 200; content contains GetWorkerW, Invoke-WebRequest, MediaElement, Dispatcher]::Run, -Action Stop"
+    },
+    {
+      "criterion": "URL do vídeo no script é absoluta, no host público e baixável",
+      "name": "test_tscheck_media_url_downloadable.py",
+      "lane": "backend",
+      "status": "passed",
+      "evidence": "metadata.media_url == https://wallpaper-engine-pro.preview.emergentagent.com/wallpapers/neon-city.mp4; GET on that URL -> 200, content-type video/mp4"
+    },
+    {
+      "criterion": "Formatos não suportados pelo Windows são convertidos para MP4",
+      "name": "test_tscheck_format_conversion_mp4.py",
+      "lane": "backend",
+      "status": "passed",
+      "evidence": "curated-11 (webm) and curated-12 (mkv) both -> 200 with metadata.media_url ending in .mp4"
+    },
+    {
+      "criterion": "POST /api/scripts/generate com script_type=batch devolve .bat auto-contido",
+      "name": "test_tscheck_batch_script_selfcontained.py",
+      "lane": "backend",
+      "status": "passed",
+      "evidence": "filename ends .bat; content contains 'ExecutionPolicy Bypass'; extracted base64 echo lines decode to a script containing 'GetWorkerW'"
+    },
+    {
+      "criterion": "Manifests Lively e Wallpaper Engine continuam válidos",
+      "name": "test_tscheck_manifests_valid.py",
+      "lane": "backend",
+      "status": "passed",
+      "evidence": "script_type=lively_zip and wallpaper_engine_json both -> 200; content parses as JSON (non-empty dict); instructions non-empty"
+    },
+    {
+      "criterion": "Caso negativo: wallpaper_id inexistente ainda retorna 200 com fallback",
+      "name": "test_tscheck_fallback_unknown_wallpaper.py",
+      "lane": "backend",
+      "status": "passed",
+      "evidence": "POST with wallpaper_id=tscheck-nonexistent-wallpaper-xyz -> 200, download_ready true, content contains GetWorkerW, metadata.media_url non-empty"
+    },
+    {
+      "criterion": "UI do modal de exportação (desktop): aba padrão .bat, alternar para PowerShell atualiza conteúdo, copiar/download sem erro",
+      "name": "export-modal-batch-default-and-tab-switch",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Modal opens via export-script-btn-curated-1; script-tab-batch has selected styling by default; script-code-preview shows 'ExecutionPolicy Bypass'; switching to script-tab-powershell updates preview to contain 'GetWorkerW' and content differs from batch; copy/download buttons clicked without app errors (one benign headless-clipboard permission pageerror, not an app bug)"
+    },
+    {
+      "criterion": "Nenhuma regressão no simulador: ativar wallpaper de vídeo faz o <video> tocar sem erros/4xx+",
+      "name": "simulator-activates-video-wallpaper",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Clicked activate-wallpaper-curated-11; a <video> element reached paused=false, readyState>2 within 8s; no HTTP responses >=400 observed during the flow"
+    }
+  ]
+}

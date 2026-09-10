@@ -62,3 +62,8 @@ LivePaper Engine Pro is a specialized Windows Live Video Wallpaper Studio & Exec
 - `GET /api/system/gaming-profiles`
 - `GET /api/system/resolutions`
 - `GET /api/system/formats`
+
+## Atualização — Runner Windows real (fix)
+- `backend/lib/win_runner.py`: gera .ps1 funcional (download do vídeo p/ %LOCALAPPDATA%\LivePaperPro, hook WorkerW via P/Invoke, WPF MediaElement em loop, pause em jogos fullscreen, `-Action Stop`) e .bat auto-contido (payload base64 + ExecutionPolicy Bypass).
+- `routers/scripts.py`: URL do asset derivada do host da requisição (x-forwarded-host) em vez de APP_URL obsoleta; webm/mkv/gif exportados como MP4 sibling (codec do Windows).
+- UI: aba padrão do modal de exportação agora é ".bat (Recomendado)".

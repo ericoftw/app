@@ -27,7 +27,7 @@ export const ScriptGeneratorModal: React.FC<ScriptGeneratorModalProps> = ({
   onClose,
   wallpaper,
 }) => {
-  const [scriptType, setScriptType] = useState<"powershell" | "batch" | "lively_zip" | "wallpaper_engine_json">("powershell");
+  const [scriptType, setScriptType] = useState<"powershell" | "batch" | "lively_zip" | "wallpaper_engine_json">("batch");
   const [resolution, setResolution] = useState("1440p");
   const [fpsLimit, setFpsLimit] = useState(wallpaper.fps || 60);
   const [autoPauseGames, setAutoPauseGames] = useState(true);
@@ -126,8 +126,8 @@ export const ScriptGeneratorModal: React.FC<ScriptGeneratorModalProps> = ({
           {/* Target Engine Tabs */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
             {[
+              { key: "batch", label: "Launcher .bat (Recomendado)", icon: FileCode, desc: "Duplo clique e pronto" },
               { key: "powershell", label: "PowerShell Nativo (.ps1)", icon: Terminal, desc: "WorkerW Hooking direto" },
-              { key: "batch", label: "Launcher Batch (.bat)", icon: FileCode, desc: "1-Click duplo clique" },
               { key: "lively_zip", label: "Lively Wallpaper", icon: FolderArchive, desc: "Manifesto LivelyInfo.json" },
               { key: "wallpaper_engine_json", label: "Wallpaper Engine", icon: Tv, desc: "Manifesto project.json" },
             ].map((tab) => {
